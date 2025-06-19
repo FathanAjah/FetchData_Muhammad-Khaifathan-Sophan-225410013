@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 
 Future<List<Article>> fetchArticles() async {
   const String apiKey = '827cb53e7edb4debabb75e240f4ea477';
-  const String url = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=$apiKey';
+  const String url = 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=827cb53e7edb4debabb75e240f4ea477';
 
   final response = await http.get(Uri.parse(url));
 
@@ -65,14 +65,14 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'TechCrunch News',
+      title: 'Gens NEWS',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('TechCrunch Top Headlines'),
+          title: const Text('Gens NEWS'),
           backgroundColor: Colors.green[700],
           foregroundColor: Colors.white,
         ),
